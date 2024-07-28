@@ -1,0 +1,11 @@
+# Ignore artifacts:
+coverage
+
+# Ignore file types:
+**/*.json
+**/*.cjs
+**/*.md
+**/*.yml
+**/*.gitignore
+**/*.gitattributes
+**/*.editorconfig

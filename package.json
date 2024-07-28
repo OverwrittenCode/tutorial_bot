@@ -1,30 +1,48 @@
 {
-  "name": "tutorial_bot",
-  "version": "1.0.0",
-  "private": true,
-  "license": "MIT",
-  "type": "module",
-  "main": "build/main.js",
-  "scripts": {
-    "build": "tsc",
-    "dev": "node --loader ts-node/esm/transpile-only src/main.ts",
-    "start": "node build/main.js",
-    "watch": "nodemon --exec npm run dev --watch src --ext ts"
-  },
-  "dependencies": {
-    "@discordx/importer": "^1.3.1",
-    "discord.js": "^14.15.3",
-    "discordx": "^11.11.1"
-  },
-  "devDependencies": {
-    "@types/node": "^20.14.4",
-    "nodemon": "^3.1.3",
-    "prettier": "^3.3.2",
-    "ts-node": "^10.9.2",
-    "typescript": "5.4.5"
-  },
-  "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=7.0.0"
-  }
+	"name": "tutorial_bot",
+	"version": "1.0.0",
+	"license": "MIT",
+	"type": "module",
+	"main": "build/bot.js",
+	"scripts": {
+		"build": "tsc",
+		"lint": "eslint --fix \"./**/*.{ts,tsx}\"",
+		"prettier": "prettier --write .",
+		"format": "npm run lint & npm run prettier",
+		"load": "npm run build && npm run format && npm run start",
+		"start": "tsx --trace-warnings src/bot.ts"
+	},
+	"dependencies": {
+		"@discordx/importer": "^1.3.1",
+		"@discordx/utilities": "^7.0.1",
+		"@eslint/config-array": "^0.17.1",
+		"@eslint/object-schema": "^2.1.4",
+		"@stylistic/eslint-plugin": "^2.3.0",
+		"@typescript-eslint/eslint-plugin": "^7.17.0",
+		"@typescript-eslint/parser": "^7.17.0",
+		"discord.js": "^14.15.3",
+		"discordx": "^11.11.1",
+		"dotenv": "^16.4.5",
+		"eslint": "^8.56.0",
+		"eslint-plugin-prettier": "^5.1.3",
+		"glob": "^9.3.5",
+		"lru-cache": "^11.0.0",
+		"reflect-metadata": "^0.2.2",
+		"rimraf": "^4.4.1",
+		"tsyringe": "^4.8.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20.14.4",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-import": "^2.29.1",
+		"nodemon": "^3.1.3",
+		"prettier": "^3.3.3",
+		"ts-node": "^10.9.2",
+		"tsx": "^4.16.2",
+		"typescript": "5.4.5"
+	},
+	"engines": {
+		"node": ">=16.0.0",
+		"npm": ">=7.0.0"
+	}
 }
