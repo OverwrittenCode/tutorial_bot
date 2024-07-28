@@ -9,8 +9,9 @@
 		"lint": "eslint --fix \"./**/*.{ts,tsx}\"",
 		"prettier": "prettier --write .",
 		"format": "npm run lint & npm run prettier",
-		"load": "npm run build && npm run format && npm run start",
-		"start": "tsx --trace-warnings src/bot.ts"
+		"start": "tsx --trace-warnings src/bot.ts",
+		"prepare": "npm run build && npm run format",
+		"load": "npm run prepare && npm run start"
 	},
 	"dependencies": {
 		"@discordx/importer": "^1.3.1",
