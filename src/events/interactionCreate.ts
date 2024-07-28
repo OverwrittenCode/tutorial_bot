@@ -1,7 +1,8 @@
 import { Events } from "discord.js";
 import { Discord, On } from "discordx";
-import { Beans } from "src/models/framework/DI/Beans.js";
 import { container } from "tsyringe";
+
+import { Beans } from "~/framework/DI/Beans.js";
 
 import type { ArgsOf, Client } from "discordx";
 

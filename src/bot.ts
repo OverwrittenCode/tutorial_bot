@@ -5,8 +5,9 @@ import { dirname, importx } from "@discordx/importer";
 import { NotBot } from "@discordx/utilities";
 import { IntentsBitField } from "discord.js";
 import { Client } from "discordx";
-import { Beans } from "src/models/framework/DI/Beans.js";
 import { container } from "tsyringe";
+
+import { Beans } from "~/framework/DI/Beans.js";
 
 abstract class Main {
 	private static readonly bot = new Client({

@@ -1,6 +1,11 @@
 {
 	"compilerOptions": {
 		"baseUrl": ".",
+		"paths": {
+			"~/framework/*": [
+				"src/models/framework/*"
+			]
+		},
 		"target": "ESNext",
 		"module": "ESNext",
 		"rootDir": "src",
@@ -19,7 +24,7 @@
 		"noErrorTruncation": true,
 		"strictNullChecks": true,
 		"useUnknownInCatchVariables": true,
-		"jsx": "react", 
+		"jsx": "react",
 		"jsxFactory": "JSX.createElement",
 		"jsxFragmentFactory": "JSX.Fragment"
 	},
